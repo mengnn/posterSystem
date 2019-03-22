@@ -1,0 +1,145 @@
+input[type="radio"]{
+    width: 20px;
+    height: 20px;
+    padding: 10px 0 ;
+}
+input[type="radio" i] {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    color:#fff;
+    background-color:#FFF;
+}
+.radio_img_list {
+  margin-top:9px;
+}
+input[type="radio"]:checked ,
+input[type="radio"]:not(:checked) {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 22px;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  text-indent: -9999px;
+  width: 22px;
+}
+input[type="radio"]:not(:checked) :after {
+  background-color: #fff;
+  border-radius: 20px;
+  content: " ";
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 20px;
+}
+input[type="radio"]:checked {
+  background-color: #ffffff;
+  border: 1px solid #3e97eb;
+  background: url('../images/blue_point.svg') no-repeat 2px 2px;
+}
+
+input[type="radio"]:checked :after {
+  left: 26px;
+}
+input[type="radio"]:checked + label,
+input[type="radio"]:not(:checked) + label {
+  vertical-align: top;
+  line-height:initial;
+}
+input[type="radio"]:checked ,
+input[type="radio"]:not(:checked)  {
+  -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked :after,
+input[type="radio"]:not(:checked):after {
+  -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+}
+input[type="radio"]:checked :after,
+input[type="radio"]:not(:checked):after {
+    -webkit-transition: left -webkit-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+     transition: left transform 0.3s;
+ }
+input[type="radio"]:checked:after { left: 26px; -webkit-transform: translateX(24px); -ms-transform: translateX(24px); -o-transform: translateX(24px); transform: translateX(24px); }
+
+input[type="radio"]:checked ,
+input[type="radio"]:not(:checked)  {
+  (-prefix-)user-select: none;
+}
+
+
+
+input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    padding: 10px 0 ;
+}
+input[type="checkbox" i] {
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    color:#fff;
+    background-color:#FFF;
+}
+input[type="checkbox"]:checked ,
+input[type="checkbox"]:not(:checked) {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: inline-block;
+  height: 22px;
+  position: relative;
+  text-indent: -9999px;
+  width: 22px;
+}
+input[type="checkbox"]:not(:checked) :after {
+  background-color: #fff;
+  border-radius: 20px;
+  content: " ";
+  height: 20px;
+  left: 2px;
+  position: absolute;
+  top: 2px;
+  width: 20px;
+}
+input[type="checkbox"]:checked {
+  background-color: #ffffff;
+  border: 1px solid #3e97eb;
+  background: url('../images/blue_point.svg') no-repeat  2px 2px;
+}
+
+input[type="checkbox"]:checked :after {
+  left: 26px;
+}
+input[type="checkbox"]:checked + label,
+input[type="checkbox"]:not(:checked) + label {
+  vertical-align: top;
+  line-height:initial;
+}
+input[type="checkbox"]:checked ,
+input[type="checkbox"]:not(:checked)  {
+  -webkit-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+}
+
+input[type="checkbox"]:checked :after,
+input[type="checkbox"]:not(:checked):after {
+  -webkit-transition: left 0.3s;
+    transition: left 0.3s;
+}
+input[type="checkbox"]:checked :after,
+input[type="checkbox"]:not(:checked):after {
+    -webkit-transition: left -webkit-transform 0.3s;
+    -o-transition: -o-transform 0.3s;
+     transition: left transform 0.3s;
+ }
+input[type="checkbox"]:checked:after { left: 26px; -webkit-transform: translateX(24px); -ms-transform: translateX(24px); -o-transform: translateX(24px); transform: translateX(24px); }
+
+input[type="checkbox"]:checked ,
+input[type="checkbox"]:not(:checked)  {
+  (-prefix-)user-select: none;
+}

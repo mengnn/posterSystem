@@ -1,0 +1,291 @@
+.dateBox{
+  width:96%;
+  overflow: hidden;
+  margin-left: 2%;
+}
+.dateStylenone{
+  width:100%;
+  overflow:hidden;
+  margin-bottom: 10px;
+}
+
+.dateStyletwoTabbox{
+  width:100%;
+  overflow-x: auto;
+  z-index: 1;
+}
+.dateStyletwoTab{
+  width:385px;
+  overflow:hidden;
+  height: 45px;
+}
+.dateStyletwoTab li{
+  float: left;
+  width:75px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size:14px;
+  border:1px solid transparent;
+}
+.dateStyletwoTab li a{
+  color:#999;
+  width:100%;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.dateStyletwoTab .dateStyleoneTabact{
+  color:#8F5427;
+  border-bottom:1px solid #8F5427;
+}
+.styleoneBox,.styletwoBox,.stylenoneBox{
+  width:100%;
+  overflow:hidden;
+  margin-top: 10px;
+}
+.styleoneBoxtitle{
+  font-size:20px;
+  border-bottom: 1px solid #ddd;
+  height: 45px;
+  line-height: 45px;
+  margin-bottom: 5px;
+  text-align: left;
+}
+.styletwoBoxtitle{
+  font-size:20px;
+  height: 45px;
+  line-height: 45px;
+}
+.styleoneTable,.stylenoneTable{
+  width:100%;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+.styleoneTable tr td,.stylenoneTable tr td{
+  border:1px solid #ccc;
+  padding: 10px 0;
+  text-align: left;
+  line-height: 1.5;
+  font-size:14px;
+  position: relative;
+}
+.styleoneTable tr td:nth-child(1){
+  border-right: none;
+  width:16%;
+  padding-left: 2%;
+}
+.styleoneTable tr td:nth-child(2){
+  border-left:none;
+  border-right:none;
+  width:20%;
+}
+.styleoneTable tr td:nth-child(3){
+  border-left:none;
+  border-right:none;
+  width:37%;
+}
+.styleoneTable tr td:nth-child(4){
+  border-left:none;
+  width:25%;
+}
+.styleoneTable tr td:nth-child(4) p{
+  width:70%;
+}
+.styleoneTable tr td:nth-child(3) span{
+  color: #999;
+}
+.styleoneTable tr td:nth-child(4) i{
+  position: absolute;
+  top:50%;
+  right: 3%;
+  transform: translate(-50%,-50%);
+}
+
+.stylenoneTable tr td:nth-child(1){
+  border-right: none;
+  width:16%;
+  padding-left: 2%;
+}
+.stylenoneTable tr td:nth-child(2){
+  border-left:none;
+  border-right:none;
+  width:20%;
+}
+.stylenoneTable tr td:nth-child(3){
+  border-left:none;
+  border-right:none;
+  width:37%;
+}
+.stylenoneTable tr td:nth-child(4){
+  border-left:none;
+  width:25%;
+}
+.stylenoneTable tr td:nth-child(4) p{
+  width:70%;
+}
+.stylenoneTable tr td:nth-child(3) span{
+  color: #999;
+}
+.stylenoneTable tr td:nth-child(4) i{
+  position: absolute;
+  top:50%;
+  right: 3%;
+  transform: translate(-50%,-50%);
+}
+.comeIcon{
+  color:#8F5427;
+  font-size:14px;
+}
+.styletwoUl{
+  width:100%;
+  overflow:hidden;
+  border-top:1px solid #ccc;
+}
+.styletwoUl ul{
+  float: left;
+}
+.styletwoLeft{
+  width:30%;
+  overflow:hidden;
+  border-right: 1px solid #ccc;
+}
+.styletwoRight{
+  width:69.5%;
+}
+.styletwoUl ul li{
+  width:100%;
+  position: relative;
+  min-height: 40px;
+  padding-bottom: 15px;
+  text-align: left;
+}
+.styletwoLeft li p{
+  margin:17px 0 0 5px;
+}
+.styletwoRight li p{
+  margin:15px 0 0 15px;
+  font-size:15px;
+}
+.styletwoRight li span{
+  margin:1px 0 0 15px;
+  display: inline-block;
+  color: #999;
+  font-size:12px;
+}
+.twoIcon{
+  font-size:12px;
+  color:#c98123;
+  position: absolute;
+  left: -7px;
+  top:5px;
+}
+
+
+.dateTabpc{
+  height: 30px;
+}
+.dateTabpc div{
+  padding:0px 15px;
+  border:1px solid #ccc;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+.dateTabpc .dateTabpcAct{
+  background:#4078cb;
+  border:1px solid #4078cb;
+  color:#fff;
+}
+
+.dateFontStyle{
+  width: 70px;
+  height: 28px;
+  padding: 0 5px;
+  line-height: 28px;
+  border: 1px solid #DDDDDD;
+  box-sizing: border-box;
+  background-color: #fff;
+
+}
+
+
+
+.styleoneTable tr td:nth-child(4){
+  border-right:none;
+}
+.styleoneTable tr td:nth-child(5){
+  border-left:none;
+  padding-right: 4px;
+}
+.styleoneTable tr td:nth-child(4) p{
+  width:90%;
+}
+.styleoneTable tr td i.comeIcon{
+  position: absolute;
+  top:50%;
+  right: 3%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+/******************************20181115******************************/
+
+
+
+
+.styleoneTable tr td:nth-child(1){
+  width:15%;
+}
+.styleoneTable tr td:nth-child(2){
+  width:18%;
+  display: none;
+}
+.styleoneTable tr td:nth-child(3){
+  width:35%;
+}
+.styleoneTable tr td:nth-child(4){
+  width:13%;
+  display: none;
+}
+.styleoneTable tr td:nth-child(5){
+  width:13%;
+  border-right: none;
+  display: none;
+}
+.styleoneTable tr td:nth-child(6){
+  width:4%;
+  border-left: none;
+}
+.nameJ{
+  margin-right: 8px;
+}
+.nameJ{
+  display: none;
+}
+.nameH{
+  display: none;
+}
+
+
+
+
+.dateThead tr th{
+  padding:10px 0;
+  text-align:left;
+}
+.dateThead tr th:nth-child(1){
+  text-indent: 6%;
+}
+.dateThead tr th:nth-child(2){
+  display:none;
+}
+.dateThead tr th:nth-child(4){
+  display:none;
+}
+.dateThead tr th:nth-child(5){
+  display:none;
+}

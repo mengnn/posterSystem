@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<title>图片剪裁</title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link href="css/cropper.css" rel="stylesheet">
+	<link href="css/cutImg.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/layer.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+	<script src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/layer.js"></script>
+
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/cropper.js"></script>
+
+
+	<script type="text/javascript">
+		$(function(){
+			var imgSizeArr = GetQueryString("arr");
+			var arr = []; //裁剪尺寸数组
+			var flag = true;
+			var  a = decodeURIComponent(imgSizeArr);
+			if(a != ''){
+				arr = eval("("+a+")");
+			}else{
+				flag = false;
+			}
+			cutImgSize(arr, flag); //flag为true 隐藏确认裁剪按钮
+		});
+
+		function alertLayer(title){
+			layer.msg(title, {time:1000});
+		}
+
+		/*
+		 * 获取页面参数
+		 */
+		function GetQueryString(name) {
+			var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+			var r = window.location.search.substr(1).match(reg);
+			if(r != null){
+				return(r[2]);
+			}else{
+				return null;
+			}
+		}
+
+		/*
+		 * 裁剪图片
+		 * t: 1、微网站
+		 */
+		function cutImg(imgPath){
+			var s = GetQueryString("s");
+			var t = GetQueryString("t");
+			var selector = decodeURIComponent(s);
+			if(t == "1"){
+				setCutImgPath(selector, imgPath);
+			    parent.$(selector).change();
+			}
+		}
+
+		function setCutImgPath(selector, imgPath){
+		   parent.$(selector).attr('src', imgPath);
+		   parent.$(selector)[0].dataset.imgX = $("#imgX").val();
+		   parent.$(selector)[0].dataset.imgY = $("#imgY").val();
+		   parent.$(selector)[0].dataset.imgWidth = $("#imgWidth").val();
+		   parent.$(selector)[0].dataset.imgHeight = $("#imgHeight").val();
+		   parent.layer.tips('裁剪成功！', selector, {tips: [1, '#3595CC'] ,time: 3000});
+		   var index = parent.layer.getFrameIndex(window.name); //获取窗口索引
+		   parent.layer.close(index);
+		}
+
+		/*
+		 * 裁剪图片尺寸
+		 */
+		function cutImgSize(arr, flag){
+			if(flag){
+				//$("#defaultImgSize").css("display", "none"); //隐藏默认
+				var w = "";
+				var h = "";
+				$.each(arr, function(i, item){
+					w = item[0];
+					h = item[1];
+					var html = '<button class="btn btn-primary" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: '+w+', &quot;height&quot;: '+h+'}" type="button">'+
+					'<span class="docs-tooltip" data-toggle="tooltip" title="">完成</span>'+
+					'</button>';
+					$("#cutImgSize").append(html);
+					$("#aspectRatio").val(w/h);
+				});
+			}else{
+				var h = '<button class="btn btn-primary" data-method="getCroppedCanvas" type="button">'+
+				'<span class="docs-tooltip" data-toggle="tooltip" title="">完成</span>'+
+				'</button>';
+				$("#cutImgSize").append(h);
+				$("#aspectRatio1").css("display", "block");
+			}
+		}
+
+		function checkFileSize(filepath, fileObj){
+			var file_size = 0;
+			if (/msie/.test(navigator.userAgent.toLowerCase())) {
+			    var img = new Image();
+			    img.src = filepath;
+			    if (img.fileSize > 0) {
+			    	file_size = img.fileSize;
+		        }
+			} else {
+			    file_size = fileObj.get(0).files[0].size;
+			}
+			return file_size;
+		}
+	</script>
+	<script src="js/cutImg.js"></script>
+</head>
+<body>
+<input id="imgX" type="hidden" />
+<input id="imgY" type="hidden" />
+<input id="imgHeight" type="hidden" />
+<input id="imgWidth" type="hidden" />
+<input type="hidden" id="aspectRatio"  value="NaN"/>
+<div class="htmleaf-container">
+		<header class="htmleaf-header">
+		</header>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="img-container">
+          <img src="images/upload.png" alt="Picture">
+          <!--<img id="defaultImg" alt="Picture">-->
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="docs-preview clearfix">
+          <div class="img-preview preview-lg"></div>
+          <div class="img-preview preview-md"></div>
+          <div class="img-preview preview-sm"></div>
+          <div class="img-preview preview-xs"></div>
+        </div>
+      </div>
+
+      	<div class="docs-data" style="display: none;">
+      		<div class="input-group">
+	            <label class="input-group-addon" for="dataWidth">宽</label>
+	            <input class="form-control" id="dataWidth" type="text" placeholder="width" disabled="true">
+	            <span class="input-group-addon">像素</span>
+          	</div>
+          	<div class="input-group">
+	            <label class="input-group-addon" for="dataHeight">高</label>
+	            <input class="form-control" id="dataHeight" type="text" placeholder="height" disabled="true">
+	            <span class="input-group-addon">像素</span>
+          	</div>
+      	</div>
+    </div>
+    <div class="row">
+      <div class="col-md-9 docs-buttons">
+        <div class="btn-group">
+          <!--
+          <button class="btn btn-primary" data-method="setDragMode" data-option="move" type="button" title="Move">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-move"></span>
+            </span>
+          </button>
+          <button class="btn btn-primary" data-method="setDragMode" data-option="crop" type="button" title="Crop">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-crop"></span>
+            </span>
+          </button>
+          -->
+          <button class="btn btn-primary" data-method="zoom" data-option="0.1" type="button" title="Zoom In">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-zoom-in"></span>
+            </span>
+          </button>
+          <button class="btn btn-primary" data-method="zoom" data-option="-0.1" type="button" title="Zoom Out">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-zoom-out"></span>
+            </span>
+          </button>
+          <button class="btn btn-primary" data-method="rotate" data-option="-45" type="button" title="Rotate Left">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-rotate-left"></span>
+            </span>
+          </button>
+          <button class="btn btn-primary" data-method="rotate" data-option="45" type="button" title="Rotate Right">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-rotate-right"></span>
+            </span>
+          </button>
+        </div>
+
+        <div class="btn-group">
+          <!--
+          <button class="btn btn-primary" data-method="disable" type="button" title="Disable">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-lock"></span>
+            </span>
+          </button>
+          <button class="btn btn-primary" data-method="enable" type="button" title="Enable">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-unlock"></span>
+            </span>
+          </button>
+          <button class="btn btn-primary" data-method="clear" type="button" title="Clear">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-remove"></span>
+            </span>
+          </button>
+          <button class="btn btn-primary" data-method="reset" type="button" title="Reset">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-refresh"></span>
+            </span>
+          </button>
+          -->
+          <label class="btn btn-primary btn-upload" for="inputImage" title="Upload image file">
+            <input class="sr-only" id="inputImage" name="file" type="file">
+
+            <!--
+            <span class="docs-tooltip" data-toggle="tooltip" title="上传图片">
+            <span class="icon icon-upload"></span>
+            </span>
+            -->
+        	<span class="docs-tooltip">
+          	选择图片
+        	</span>
+          </label>
+          <!--
+          <button class="btn btn-primary" data-method="destroy" type="button" title="Destroy">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              <span class="icon icon-off"></span>
+            </span>
+          </button>
+          -->
+        </div>
+
+        <div class="btn-group btn-group-crop" id="cutImgSize">
+          <!--<button class="btn btn-primary" data-method="getCroppedCanvas" type="button" id="defaultImgSize">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              	裁剪
+            </span>
+          </button>-->
+          <!--<button class="btn btn-primary" data-method="getCroppedCanvas" data-option="{ &quot;width&quot;: 160, &quot;height&quot;: 90 }" type="button">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              160 &times; 90
+            </span>
+          </button>-->
+        </div>
+
+        <div class="modal fade docs-cropped" id="getCroppedCanvasModal" aria-hidden="true" aria-labelledby="getCroppedCanvasTitle" role="dialog" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button class="close" data-dismiss="modal" type="button" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="getCroppedCanvasTitle">裁剪后的图片</h4>
+              </div>
+              <div class="modal-body"></div>
+			  <input type="button" onclick="save();" value="保存"/>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-3 docs-toggles" style="display: none;" id="aspectRatio1">
+        <div class="btn-group btn-group-justified" data-toggle="buttons">
+          <!-- <label class="btn btn-primary" data-method="setAspectRatio" data-option="1.7777777777777777" title="Set Aspect Ratio">
+            <input class="sr-only" id="aspestRatio1" name="aspestRatio" value="1.7777777777777777" type="radio">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              16:9
+            </span>
+          </label> -->
+          <!-- <label class="btn btn-primary" data-method="setAspectRatio" data-option="1.3333333333333333" title="Set Aspect Ratio">
+            <input class="sr-only" id="aspestRatio2" name="aspestRatio" value="1.3333333333333333" type="radio">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              4:3
+            </span>
+          </label> -->
+          <label class="btn btn-primary" data-method="setAspectRatio" data-option="1" title="Set Aspect Ratio">
+            <input class="sr-only" id="aspestRatio3" name="aspestRatio" value="1" type="radio">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              1:1
+            </span>
+          </label>
+          <!-- <label class="btn btn-primary" data-method="setAspectRatio" data-option="0.6666666666666666" title="Set Aspect Ratio">
+            <input class="sr-only" id="aspestRatio4" name="aspestRatio" value="0.6666666666666666" type="radio">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              2:3
+            </span>
+          </label> -->
+
+          <!-- <label class="btn btn-primary active" data-method="setAspectRatio" data-option="NaN" title="Set Aspect Ratio">
+            <input class="sr-only" id="aspestRatio5" name="aspestRatio" value="NaN" type="radio">
+            <span class="docs-tooltip" data-toggle="tooltip" title="">
+              	不限
+            </span>
+          </label> -->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

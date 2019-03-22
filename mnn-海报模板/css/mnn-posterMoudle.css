@@ -1,0 +1,235 @@
+﻿/*弹窗*/
+.black_overlay{
+    display: none;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:9998;
+    -moz-opacity: 0.5;
+    opacity:.5;
+    filter: alpha(opacity=88);
+    overflow:hidden;
+}
+.pop_xx {
+    width: 17px;
+    height: 17px;
+    background: url(../images/pop_xx.jpg) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    margin-top: 17px;
+}
+
+/*删除弹窗*/
+.white_content2{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 210px;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    z-index:9999;
+}
+.white_content2 .title-one {
+    height: 49px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 0 15px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.white_content2 .title-two{
+  width: 80%;
+  height:60px;
+  margin-top: 37px;
+  margin-left: 10%;
+}
+.white_content2 .title-two img{
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-left: 90px;
+}
+.white_content2 .title-two p{
+  float: left;
+  font-size: 14px;
+  margin-left: 20px;
+  color: #666;
+  margin-top: 5px;
+}
+.white_content2 .title-three{
+  padding: 10px 0;
+  text-align: center;
+}
+.white_content2 .title-three button{
+  font-size: 12px;
+  line-height: 29px;
+}
+.white_content2 .title-three .current{
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  background: #4079CB;
+  border: 1px solid #4079CB;
+  color: #fff;
+}
+.pop_btn1, .pop_btn2 {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    background: #F7F7F7;
+    border: 1px solid #DDDDDD;
+    cursor: pointer;
+    /*margin-left: 10px;*/
+}
+
+.white_content3{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 210px;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    z-index:9999;
+}
+.white_content3 .title-one {
+    height: 49px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 0 15px;
+    line-height: 49px;
+    font-size: 14px;
+}
+.white_content3 .title-two{
+  width: 80%;
+  height:60px;
+  margin-top: 37px;
+  margin-left: 10%;
+}
+.white_content3 .title-two img{
+  width: 40px;
+  height: 40px;
+  float: left;
+  margin-left: 130px;
+}
+.white_content3 .title-two p{
+  float: left;
+  font-size: 14px;
+  margin-left: 20px;
+  color: #666;
+  margin-top: 5px;
+}
+.white_content3 .title-three{
+  padding: 10px 0;
+  text-align: center;
+}
+.white_content3 .title-three button{
+  font-size: 12px;
+  line-height: 29px;
+}
+.white_content3 .title-three .current{
+  height: 30px;
+  line-height: 30px;
+  padding: 0 15px;
+  background: #4079CB;
+  border: 1px solid #4079CB;
+  color: #fff;
+}
+
+
+
+.main{
+    padding: 12px;
+    background:#fff !important;
+}
+.c_right {
+    width: 100%;
+    background: #fff;
+}
+
+
+.main-ul{
+  margin-top:10px;
+  overflow: hidden;
+}
+.main-ul li{
+  float:left;
+  width:243px;
+  height:452px;
+  padding:8px;
+  margin-right:45px;
+  border:1px solid #ccc;
+  position:relative;
+  cursor:pointer;
+  margin-bottom:20px;
+}
+.ulImg{
+  width:100%;
+  height:400px;
+  position:relative;
+}
+.micImg{
+  width:100%;
+  height:100%;
+}
+.Ptext1{
+  width:100%;
+  font-size:15px;
+  font-weight:bold;
+  margin-top:8px;
+  height: 30px;
+  line-height: 30px;
+}
+.Ptext2{
+  width:100%;
+  font-size:15px;
+  text-align:center;
+  color:#fff;
+  background:#4078cb;
+  margin-top:8px;
+  height: 30px;
+  line-height: 30px;
+  display:none;
+}
+.ulImgMould{
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background:rgba(0,0,0,0.2);
+  display:none;
+}
+.ulImgMbox{
+  width:150px;
+  height:175px;
+  background:#fff;
+  margin:110px auto 0;
+}
+.ulCodeImg{
+  width:90%;
+  margin-left:5%;
+}
+.ulImgMbox p{
+  width:100%;
+  background:#ccc;
+  text-align:center;
+  height: 27px;
+  line-height: 27px;
+  font-size:12px;
+}
+.liSpan{
+  display:inline-block;
+  width:20px;
+  height:auto;
+  line-height: 1.9;
+  color:#ccc;
+  font-size:17px;
+  margin-top: 113px;
+}

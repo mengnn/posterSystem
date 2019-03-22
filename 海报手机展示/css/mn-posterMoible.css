@@ -1,0 +1,106 @@
+.i2{
+    font-size:60px;
+    width: 88px;
+    height: 88px;
+    margin-top:1%;
+    border-radius: 42px;
+    background-color:#6587C6;
+    line-height:88px;
+}
+.nine_style>li>p{
+    margin-top:1%;
+}
+
+.found_list .textarea, .found_list .editor{
+    width:290px;
+}
+.lunbo{/*测试*/
+    width:100%;
+    height:130px;
+    background-color:#888;
+    font-size:35px;
+    text-align:center;
+    line-height:130px;
+}
+.mymeeting{
+    width:85%;
+    height:40px;
+    text-align:center;
+    background:#6587C6;
+    margin:10% auto;
+    border:1px solid #6587C6;
+    line-height:40px;
+    border-radius:5px;
+    color:#eee;
+}
+  /****  轮播图  ******/
+.form_component .sider_box{
+     position:relative;
+     width:100%;
+     height:114px;
+     overflow: hidden;
+}
+.form_component .img-box{
+   position: relative;
+}
+.form_component .img-box li{
+    position: absolute;
+    top:0;
+    left:0;
+}
+.form_component .img-box li img{
+    width:100%;
+
+}
+.btn-box{
+    width: 100%;
+    position: absolute;
+    bottom: 24px;
+    left:0;
+    text-align:center;
+    z-index: 3;
+}
+.btn-box span{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 100px;
+    margin:0 2px;
+    background: #fff;
+    cursor: pointer;
+
+}
+.btn-box span.cur{
+    background-color:#3F7ACA;
+    color:#fff;
+}
+.editing_view_con,.formBuilder_example,.formBuilder_example_form,.formBuilder_main,.form_component{
+    height:100%;
+}
+
+.form_component .utility {
+    /* width: 100%; */
+    background: transparent;
+    padding: 0px 14px 12px;
+    box-sizing: border-box;
+    cursor: move;
+    position: relative;
+    z-index: 10;
+    /* border: 1px solid #000; */
+}
+.formBuilder_example_form{
+  background: #EAEDF2;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  border: 1px solid #C1C1C1;
+  box-sizing: border-box;
+}
+.form_component{
+  position: relative;width: 375px;
+  height: 667px;background: url(../images/Card_bg.png) 0% 0% no-repeat;
+  background-size: 100% 100%;
+  overflow:hidden;
+}

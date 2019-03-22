@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>海报列表</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0"/>
+  <link rel="stylesheet" href="css/posterListreset.css">
+  <link rel="stylesheet" href="css/posterListindex.css">
+  <link rel="stylesheet" href="css/mnn-posterList.css">
+  <!-- iconfont -->
+  <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+</head>
+<body>
+  <div id="section">
+  <!-- header -->
+    <div id="header">
+      <div class="hui"><img src="images/hui.jpg" alt=""></div>
+      <div class="logo">
+        <h1 class="f_left">
+			<a href="#" class="f_left"><img src="images/logo.png" alt=""></a>
+			<a href="#" class="chaining f_left">https://www.baidu.com/s?wd=bootsthttps://www.baidu.com/s?wd=bootstrap&rsv_spt=</a>
+		</h1>
+        <div class="f_right logo_r">
+          <ul class="logo_r_show">
+            <li class="search">
+              <p>
+                <span class="f_left">受邀者</span>
+                <input class="f_left" type="text" >
+                <i></i>
+              </p>
+            </li>
+            <li class="h_qiandao"><a href="#">微信签到</a></li>
+            <li class="prompt"><a href="#"><span>0</span></a></li>
+            <li class="help">帮助与文档</li>
+            <li class="tel">18621589099</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  <!-- content -->
+  <div id="content" class="clearfix">
+    <!-- 左边导航 -->
+    <div class="c_left">
+      <ul class="c_left_nav f_left">
+        <li class="current" title="活动"><img src="images/icon6.png" alt=""></li>
+        <li title="应用"><img src="images/icon7.png" alt=""></li>
+        <li title="联系人"><img src="images/icon8.png" alt=""></li>
+        <li title="供应商"><img src="images/icon9.png" alt=""></li>
+        <li title="账户"><img src="images/icon10.png" alt=""></li>
+      </ul>
+    </div>
+
+  <!-- 主要模块 -->
+    <div class="c_right">
+      <div class="main clearfix">
+        <!-- 活动 -->
+        <div class="activity">
+          <h3 class="con_tit">
+             <div class="est"  onclick="viewTask('light1')">+ 创建海报</div>
+		      </h3>
+          <div class="activity_con clearfix">
+            <div class="activity_show">
+              <div class="activity_list">
+                <img src="images/u75.jpg" alt="">
+                <img src="images/bg1.png" alt="" style="width: 58px;height: 58px;position: absolute;right: 0;top: 0;">
+                <img src="images/bg2.png" alt="" style="width: 58px;height: 58px;position: absolute;right: 0;top: 0;display:none;">
+                <div class="ac_text">
+                  <p>2019年会腾年会</p>
+                  <ul class="clearfix">
+                    <li>2019年会腾年会</li>
+                  </ul>
+                </div>
+              </div>
+              <!-- 鼠标移上隐藏 -->
+              <div class="hide">
+              	<!-- 编辑、发布 -->
+                <div class="hide-top">
+                   <ul>
+                     <li class="bianji_y">
+                       <a href="javascript:;" class="iconfont">&#xe62f;</a>
+                     </li>
+
+                     <li>
+                       <p>编辑</p>
+                     </li>
+
+                   </ul>
+                </div>
+                 <div class="hide-bottom">
+                    <div class="option">
+                    	<div class="ag" id="share">
+	                    	<ul>
+	                    		<li>
+	                    			<a href="javascript:;" class="iconfont">&#xf010a;</a>
+	                    		</li>
+	                    		<li>
+	                    			<span>分享</span>
+	                    		</li>
+	                    	</ul>
+	                    	<img src="images/u86.jpg" alt="" class="erweima">
+                    	</div>
+                    	<div class="ag">
+	                    	<ul>
+	                    		<li>
+	                    			<a href="javascript:;" class="iconfont">&#xe636;</a>
+	                    		</li>
+	                    		<li>
+	                    			<span>复制</span>
+	                    		</li>
+	                    	</ul>
+                    	</div>
+                    	<div class="ag">
+	                    	<ul onclick="viewTask('light1')">
+	                    		<li>
+	                    			<a href="javascript:;" class="iconfont">&#xe679;</a>
+	                    		</li>
+	                    		<li>
+	                    			<span>删除</span>
+	                    		</li>
+	                    	</ul>
+                    	</div>
+
+                    </div>
+                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- 弹窗背景 -->
+<div id="fade" class="black_overlay"></div>
+<!-- 创建海报弹窗 -->
+<div id="light1" class="white_content2">
+    <div class="title-one">
+        <span>创建海报</span>
+        <div class="f_right pop_xx" onclick="cancel('light1');"></div>
+    </div>
+    <div class="title-two">
+    	<ul class="title-two-second">
+    		<li>
+    			<p><span>*</span>海报名称：</p>
+    		</li>
+    		<li>
+    			<input type="" name="">
+    		</li>
+    	</ul>
+    </div>
+    <div class="title-three">
+    	<button class="pop_btn1 current">确定</button>
+    	<button class="pop_btn2"  onclick="cancel('light1');">取消</button>
+    </div>
+</div>
+
+<script>
+    function viewTask(id){
+     $("#"+id).show();
+     $("#fade").show();
+    }
+    function cancel(id){
+     $("#"+id).hide();
+     $("#fade").hide();
+    }
+ </script>
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/posterListindex.js"></script>
+</body>
+</html>

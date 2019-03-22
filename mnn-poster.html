@@ -1,0 +1,2120 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+  <meta charset="UTF-8">
+  <title>会腾后台-海报</title>
+  <link rel="stylesheet" type="text/css"  href="css/posterReset.css">
+   <!-- 颜色控件 -->
+  <link rel="stylesheet" type="text/css"  href="css/posterColor.css">
+  <!-- 截图插件 -->
+  <link rel="stylesheet" href="css/layer.css"/>
+  <!-- 日程组件 -->
+  <link rel="stylesheet" type="text/css" href="css/mnn-posterDateSetting.css">
+
+  <link rel="stylesheet" type="text/css"  href="css/jquery-ui.min.css">
+  <link rel="stylesheet" type="text/css"  href="css/mnn-editing-questionnaire.css">
+  <link rel="stylesheet" type="text/css"  href="css/mnn-poster.css">
+  <link rel="stylesheet" href="css/posterRuler.css">
+  <link rel="stylesheet" href="css/mnn-newPoster.css">
+  <link rel="stylesheet" href="css/checked_box.css">
+  </head>
+
+<body>
+  <div id="section">
+    <!-- header -->
+    <div id="header">
+      <div class="hui">
+        <img src="images/hui.jpg" alt=""></div>
+      <div class="logo">
+        <h1 class="f_left">
+          <a href="#">
+            <img src="images/logo.png" alt=""></a>
+        </h1>
+        <div class="f_right logo_r">
+          <ul class="logo_r_show">
+            <li class="search">
+              <p>
+                <span class="f_left">受邀者</span>
+                <input class="f_left" type="text" > <i></i>
+              </p>
+            </li>
+            <li class="h_qiandao">
+              <a href="#">微信签到</a>
+            </li>
+            <li class="prompt">
+              <a href="#">
+                <span>0</span>
+              </a>
+            </li>
+            <li class="help">帮助与文档</li>
+            <li class="tel">18621589099</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- content -->
+    <div id="content" class="clearfix">
+      <!-- 左边导航 -->
+      <div class="c_left">
+        <ul class="c_left_nav f_left">
+          <li class="current" title="活动">
+            <img src="images/icon6.png" alt=""></li>
+          <li title="应用">
+            <img src="images/icon7.png" alt=""></li>
+          <li title="联系人">
+            <img src="images/icon8.png" alt=""></li>
+          <li title="供应商">
+            <img src="images/icon9.png" alt=""></li>
+          <li title="账户">
+            <img src="images/icon10.png" alt=""></li>
+        </ul>
+
+      </div>
+
+      <!-- 主要模块 -->
+      <div class="c_right">
+        <div class="main">
+          <div class="invitee_all">
+            <!---- 编辑主要模块 ---->
+            <div class="invitee_show clearfix ">
+              <!-- 状态导航 -->
+              <div class="editing_staus_bar">
+                <div class="btn_list_r f_right ">
+                  <span class="f_left btn1" onclick="save_web(this);" style="display: inline-block;width: 100px;text-align: center;">保存</span>
+                  <span class="f_left btn2">下载</span>
+                  <span class="f_left btn2" onclick="posterShare()">分享</span>
+                </div>
+              </div>
+
+              <!-- 编辑 -->
+              <div class="editing_content clearfix">
+                <!-- 1.左边添加组件 -->
+                <div class="formBuilder_edit">
+                  <ul class="posterMnueleft">
+                    <li style="color: #4078cb;">
+                      <img src="images/mImg1-1.png" class="mImg1">
+                      <span>模板</span>
+                    </li>
+                    <li>
+                      <img src="images/mImg2.png" class="mImg2">
+                      <span>文字</span>
+                    </li>
+                    <li>
+                      <img src="images/mImg3.png" class="mImg3">
+                      <span>图片</span>
+                    </li>
+                    <li>
+                      <img src="images/mImg4.png" class="mImg4">
+                      <span>活动添加</span>
+                    </li>
+                  </ul>
+                  <div class="posterMnueright">
+                      <!-- 模板-->
+                      <div class="formBuilder_box posterContertLeft">
+                        <ul class="posterM utilityColFirst clearfix">
+                          <li class="utilityM">
+                              <img src="images/poster1.png">
+                          </li>
+                          <li class="utilityM">
+                             <img src="images/poster2.png">
+                          </li>
+                          <li class="utilityM">
+                             <img src="images/poster3.png">
+                          </li>
+                          <li class="utilityM">
+                             <img src="images/poster4.png">
+                          </li>
+                          <li class="utilityM">
+                             <img src="images/poster5.png">
+                          </li>
+                          <li class="utilityM">
+                             <img src="images/poster6.png">
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 文字-->
+                      <div class="formBuilder_box posterContertLeft" style="position: relative;display:none;">
+                        <ul class="utilityCol utilityColFirst clearfix">
+                          <li class="utility ui-draggable"  title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/titleImg1.png" class="titleImg">
+                            <span class="title" style="display: none;">标题</span>
+                          </li>
+                          <li class="utility ui-draggable"  title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/titleImg2.png" class="titleImg">
+                            <span class="title" style="display: none;">正文</span>
+                          </li>
+                          <li class="utility ui-draggable"  title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/titleImg3.png" class="titleImg">
+                            <span class="title" style="display: none;">宋体</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 图片-->
+                      <div class="formBuilder_box posterContertLeft" style="display:none;">
+                        <ul class="utilityCol utilityColFirst clearfix">
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/blackImg.png" class="fieleImg">
+                            <span class="title" style="display: none;">空白图片</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg1.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片1</span>
+                          </li>
+
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg2.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片2</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg3.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片3</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg4.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片4</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg5.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片5</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg6.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片6</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg7.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片7</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg8.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片8</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <!-- <span class="formOption formOption2 formOption_icon2"></span> -->
+                            <img src="images/fieldImg9.png" class="fieleImg">
+                            <span class="title" style="display: none;">图片9</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <!-- 活动主题-->
+                      <div class="formBuilder_box posterContertLeft" style="display:none;">
+                        <ul class="utilityCol utilityColFirst clearfix actUtilityCol">
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe128;</i>
+                            <span class="title">活动标题</span>
+                          </li>
+                          <li class="utility ui-draggable"  title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe123;</i>
+                            <span class="title">主办方</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe115;</i>
+                            <span class="title">开始时间</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe117;</i>
+                            <span class="title">结束时间</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe118;</i>
+                            <span class="title">主办方电话</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe114;</i>
+                            <span class="title">主办方邮箱</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption iconfont i_card">&#xe130;</i>
+                            <span class="title">微信头像</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe116;</i>
+                            <span class="title">参会者姓名</span>
+                          </li>
+                          <li class="utility ui-draggable"  title="拖动到右侧" >
+                            <!-- <span class="formOption formOption2 formOption_icon10"></span> -->
+                            <img class="formOption  iconfont i_card titleImg" style="width: 17px;vertical-align: top;margin-top: 11px;" src="images/u2409.png"/>
+                            <span class="title">日程表</span>
+                          </li>
+                          <li class="utility ui-draggable" title="拖动到右侧">
+                            <i class="formOption  iconfont i_card">&#xe129;</i>
+                            <span class="title">活动二维码</span>
+                          </li>
+
+
+                        </ul>
+                      </div>
+                  </div>
+                </div>
+                <!-- 2.中间预览 -->
+                <div class="editing_view_con">
+                  <div class="formBuilder_example">
+                    <div class="formBuilder_example_form" id="starff" style="position: relative;">
+                        <div class="formBuilder_main">
+                          <ul class="form_component clearfix ui-sortable ui-droppable" onmousedown="moumove(event)">
+                            <!-- 中文模板 -->
+                            <li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -14px; top: 233px;">
+                            <div name="paper" dir="30"><div class="dir33" style="position: relative; width: 370px; min-height: 38px; line-height: 1.25; left: 0px;"><div class="dateBox"><div class="dateStylenone"><div class="styleoneBox"><table class="styleoneTable" style="border: none;"><thead class="dateThead"><tr style="background: rgba(255, 255, 255, 0);"><th style="background: rgb(245, 129, 142); color: rgb(255, 255, 255);">时间</th><th style="display: table-cell; background: rgb(245, 129, 142); color: rgb(255, 255, 255);">内容</th><th style="background: rgb(245, 129, 142); color: rgb(255, 255, 255);">人物</th><th style="display: none; background: rgb(245, 129, 142); color: rgb(255, 255, 255);">嘉宾</th><th style="display: table-cell; background: rgb(245, 129, 142); color: rgb(255, 255, 255);">地点</th></tr></thead><tbody><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">11:00-12:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>午休</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">12:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>参观</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">12:00-14:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">14:00-14:30</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>实际操作</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">14:30-16:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">16:30-17:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr></tbody></table></div></div></div><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor18"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -6px; top: 205px;">
+                            <div name="paper" dir="21"><div class="dir21" style="position: relative; width: 356px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 36px; color: rgb(245, 129, 142);"><span style="font-size: 18px; font-family: &quot;Microsoft YaHei&quot;;">会议日程</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -5px; top: 172px;">
+                            <div name="paper" dir="21"><div class="dir21" style="position: relative; width: 353px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 39px;"><span style="font-size: 14px;font-family:Microsoft YaHei;">(会议时间：2019/03/06&nbsp; &nbsp;11:00-17:30)</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -7px; top: 136px;">
+                            <div name="paper" dir="21"><div class="dir21" style="position: relative; width: 356px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 35px; color: rgb(245, 129, 142);"><span style="font-size: 21px; font-family: &quot;Microsoft YaHei&quot;;">一站式会议在线解决方案</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: 285px; top: -4px;">
+                            <div name="paper" dir="41"><div class="dir44" style="position: relative; left: 0px; width: 70px; height: 70px;"><img src="images/u1263.png" class="fieldImgBox" width="100%" height="100%"><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor29"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -3px; top: 85px;">
+                            <div name="paper" dir="11"><div style="position: relative; width: 355px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 35px; color: rgb(245, 129, 142);" class="dir11 wenzi1"><span style="font-size: 33px; font-family: &quot;Microsoft YaHei&quot;; font-weight: bold;">2 0 1 8 会 腾 软 件</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor1"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: 219px; top: 59px;">
+                            <div name="paper" dir="21"><div class="dir21" style="position:relative;width: 200px; min-height: 38px; line-height: 1.25;text-align: center;word-wrap: break-word;word-break: normal;"><span style="font-size: 12px; font-family: &quot;Microsoft YaHei&quot;;">扫码关注</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li>
+                          </ul>
+
+                        </div>
+                        <div class="scaleBox">
+                          <div class="scaleContent">
+                            <span onclick="scaleS(this)">-</span>
+                            <span class="scaleN">100</span>
+                            <span>%</span>
+                            <span onclick="scaleM(this)">+</span>
+                            <span onclick="scaleSM(this)">1:1</span>
+                          </div>
+                        </div>
+                    </div>
+
+                  </div>
+                </div>
+                <!-- 3.右边设置 -->
+                <div class="editing_right_reset">
+                  <div class="invitee_b">
+                    <div class="invitee_b_tit">
+                      <span class="drug_cur current">编辑内容</span>
+                      <span class="last_span">基础设置</span>
+                      <!-- <span class="">基础设置</span> -->
+                    </div>
+                    <div class="initee_box" id="initee_box">
+                      <!-- 31编辑内容设置-->
+                      <div class="invitee_b_con invitee_b_con2 invitee_b_con3" style="display:block;">
+                        <div class="module_edit_box">
+
+                          <!-- 1文字设置 -->
+                          <div class="module_reset edit_singleLine admission_reset"  id="dir11"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">文字内容</h6>
+                            <div class="editor editor1" contenteditable="true" style="" onkeyup="setText(this,'.form_component .clicked .dir11>span');"  onclick="setText(this,'.form_component .clicked .dir11>span');">
+                                标题
+                            </div>
+                            <h6>文字样式</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir11>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir11>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min" type="button" value="-" onclick="size_min(this,'.text_box','.form_component .clicked .dir11>span')"/>
+                                <input class="text_box" type="text" value="20" onchange="sizeNum('.text_box','.form_component .clicked .dir11>span');" />
+                                <input class="size_add" type="button" value="+" onclick="size_add(this,'.text_box','.form_component .clicked .dir11>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir11>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字颜色</h6>
+                            <div class="found_con found_constyle">
+                              <input type="text" id="textId1">
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir11')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir11')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir11')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="320" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir11');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir11');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!--文字2设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir21"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">文字内容</h6>
+                            <div class="editor editor1" contenteditable="true" style="" onkeyup="setText(this,'.form_component .clicked .dir21>span');"  onclick="setText(this,'.form_component .clicked .dir21>span');">
+                                正文
+                            </div>
+                            <h6>文字样式</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir21>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir21>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min3" type="button" value="-" onclick="size_min(this,'.text_box3','.form_component .clicked .dir21>span')"/>
+                                <input class="text_box3" type="text" value="14" onchange="sizeNum('.text_box3','.form_component .clicked .dir21>span');" />
+                                <input class="size_add3" type="button" value="+" onclick="size_add(this,'.text_box3','.form_component .clicked .dir21>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir21>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字颜色</h6>
+                            <div class="found_con found_constyle">
+                              <input type="text" id="textId2">
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir21')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir21')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir21')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir21');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir21');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+
+                          </div>
+                           <!-- 文字3 -->
+                          <div class="module_reset edit_singleLine"  id="dir14"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">文字内容</h6>
+                            <div class="editor editor1" contenteditable="true" style="" onkeyup="setText(this,'.form_component .clicked .dir14>span');"  onclick="setText(this,'.form_component .clicked .dir14>span');">
+                                宋体
+                            </div>
+                            <h6>文字样式</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir14>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir14>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min2" type="button" value="-" onclick="size_min(this,'.text_box2','.form_component .clicked .dir14>span')"/>
+                                <input class="text_box2" type="text" value="14" onchange="sizeNum('.text_box2','.form_component .clicked .dir14>span');" />
+                                <input class="size_add2" type="button" value="+" onclick="size_add(this,'.text_box2','.form_component .clicked .dir14>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir14>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字颜色</h6>
+                            <div class="found_con found_constyle">
+                              <input type="text" id="textId3">
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir14')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir14')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir14')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="320" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir14');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir14');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 1图片设置 -->
+                          <div class="module_reset edit_singleLine admission_reset"  id="dir12"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/blackImg.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>图片尺寸</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="img_width(this);"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="img_height(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="img_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="img_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 2图片设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir13"  style="display:none;">
+                           <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg1.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>图片尺寸</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="QR_w" onkeyup="QR_width(this);"><span>px</span>
+                                <span class="QR_height">高</span> <input type="text" value="90" class="QR_h" onkeyup="QR_height(this);"><span>px</span>
+                              </div>
+                            </div>
+
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="QR_l" onkeyup="img_left(this);"><span>px</span>
+                                <span class="QR_top">距顶</span> <input type="text" value="0" class="QR_t" onkeyup="img_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 3图片设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir36"  style="display:none;">
+                             <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix">
+                                   <img src="images/fieldImg2.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                   <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                                </div>
+                              </div>
+                              <h6>尺寸大小</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix font_wh">
+                                  <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir39');"><span>px</span>
+                                  <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir39');"><span>px</span>
+                                </div>
+                              </div>
+                              <h6>位置</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix font_position">
+                                  <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                  <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                                </div>
+                              </div>
+                              <h6>图层顺序</h6>
+                              <div class="found_con found_constyle">
+                                <ul class="textZindex" >
+                                  <li onclick="textZindex(this,'.form_component .clicked')">
+                                    <img src="images/imgTop1.png" class="imgTopbox">
+                                  </li>
+                                  <li onclick="textZindex(this,'.form_component .clicked')">
+                                    <img src="images/imgTop2.png" class="imgTopbox">
+                                  </li>
+                                  <li onclick="textZindex(this,'.form_component .clicked')">
+                                    <img src="images/imgTop3.png" class="imgTopbox">
+                                  </li>
+                                  <li onclick="textZindex(this,'.form_component .clicked')">
+                                    <img src="images/imgTop4.png" class="imgTopbox">
+                                  </li>
+                                </ul>
+                              </div>
+                              <h6>圆角半径</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix font_position">
+                                  <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                                </div>
+                              </div>
+                              <h6>旋转</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix font_position">
+                                  <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                                </div>
+                              </div>
+                              <h6>透明度</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix font_position">
+                                  <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                                </div>
+                              </div>
+
+                          </div>
+                          <!-- 4图片设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir25"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg3.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir25');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir25');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 5图片设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir27"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg4.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir27');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir27');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 6图片设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir28"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg5.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir28');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir28');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 7图片设置 -->
+                          <div class="module_reset edit_number"  id="dir29"  style="display: none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg6.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir29');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir29');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 8图片设置 -->
+                          <div class="module_reset edit_number"  id="dir31"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg7.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir34');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir34');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 9图片设置-->
+                          <div class="module_reset"  id="dir32" style="display: none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg8.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir35');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir35');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 10图片设置 -->
+                          <div class="module_reset edit_singleLine" id="dir33"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">图片</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                 <img src="images/fieldImg9.png" style="border: 1px solid #ccc;" class="dir12Img" width="80" min-height="80">
+                                 <button class="upload_img" onclick="cutImg('null', 1,'')">上传图片</button>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir36');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir36');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 24活动标题设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir37"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="活动标题">活动标题</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>样式设置</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir40>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir40>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min22" type="button" value="-" onclick="size_min(this,'.text_box22','.form_component .clicked .dir40>span')"/>
+                                <input class="text_box22" type="text" value="16" onchange="sizeNum('.text_box22','.form_component .clicked .dir40>span');" />
+                                <input class="size_add22" type="button" value="+" onclick="size_add(this,'.text_box22','.form_component .clicked .dir40>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir40>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir40')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir40')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir40')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir40');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir40');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 25主办方设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir38"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="主办方">主办方</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>样式设置</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir41>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir41>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min23" type="button" value="-" onclick="size_min(this,'.text_box23','.form_component .clicked .dir41>span')"/>
+                                <input class="text_box23" type="text" value="16" onchange="sizeNum('.text_box23','.form_component .clicked .dir41>span');" />
+                                <input class="size_add23" type="button" value="+" onclick="size_add(this,'.text_box23','.form_component .clicked .dir41>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir41>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir41')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir41')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir41')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir41');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir41');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 26开始时间设置 -->
+                          <div class="module_reset edit_singleLine"  id="dir39"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="开始时间">开始时间</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>样式设置</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir42>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir42>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min24" type="button" value="-" onclick="size_min(this,'.text_box24','.form_component .clicked .dir42>span')"/>
+                                <input class="text_box24" type="text" value="16" onchange="sizeNum('.text_box24','.form_component .clicked .dir42>span');" />
+                                <input class="size_add24" type="button" value="+" onclick="size_add(this,'.text_box24','.form_component .clicked .dir42>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir42>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir42')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir42')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir42')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir42');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir42');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 27结束时间 -->
+                          <div class="module_reset edit_singleLine"  id="dir40"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="结束时间">结束时间</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>样式设置</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir43>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir43>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min25" type="button" value="-" onclick="size_min(this,'.text_box25','.form_component .clicked .dir43>span')"/>
+                                <input class="text_box25" type="text" value="16" onchange="sizeNum('.text_box25','.form_component .clicked .dir43>span');" />
+                                <input class="size_add25" type="button" value="+" onclick="size_add(this,'.text_box25','.form_component .clicked .dir43>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir43>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir43')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir43')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir43')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir43');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir43');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!--主办方电话-->
+                          <div class="module_reset edit_singleLine"  id="dir43"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="联系电话">主办方电话</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>样式设置</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir46>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir46>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min28" type="button" value="-" onclick="size_min(this,'.text_box28','.form_component .clicked .dir46>span')"/>
+                                <input class="text_box28" type="text" value="16" onchange="sizeNum('.text_box28','.form_component .clicked .dir46>span');" />
+                                <input class="size_add28" type="button" value="+" onclick="size_add(this,'.text_box28','.form_component .clicked .dir46>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir46>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir46')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir46')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir46')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir46');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir46');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+
+                          <!--主办方邮箱-->
+                          <div class="module_reset edit_singleLine"  id="dir44"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="联系邮箱">主办方邮箱</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>样式设置</h6>
+                            <div class="found_con found_constyle">
+                             <div class="found_list clearfix">
+                                <span class="z_family">字体</span>
+                                <select class="font_family" name="alginStyle"  onchange="fontFamily(this,'font-family','.form_component .clicked .dir47>span');">
+                                    <option value="Microsoft YaHei">微软雅黑</option>
+                                    <option value="SimHei">黑体</option>
+                                    <option value="SimSun ">宋体</option>
+                                    <option value="KaiTi ">楷体</option>
+                                  </select>
+                                  <span class="z_style">样式</span>
+                                  <select class="font_family" name="alginStyle"  onchange="fontStyle(this,'font','.form_component .clicked .dir47>span');">
+                                      <option value="normal">常规</option>
+                                      <option value="bold">加粗</option>
+                                      <option value="italic">斜体</option>
+                                      <option value="underline">下划线</option>
+                                    </select>
+                              </div>
+                              <div class="found_list clearfix">
+                                <span class="z_family">字号</span>
+                                <input class="size_min29" type="button" value="-" onclick="size_min(this,'.text_box29','.form_component .clicked .dir47>span')"/>
+                                <input class="text_box29" type="text" value="16" onchange="sizeNum('.text_box29','.form_component .clicked .dir47>span');" />
+                                <input class="size_add29" type="button" value="+" onclick="size_add(this,'.text_box29','.form_component .clicked .dir47>span')" />
+                                <span class="line_style">行距</span>
+                                  <select class="font_line" name="alginStyle"  onchange="fontLine(this,'line-height','.form_component .clicked .dir47>span');">
+                                      <option value="1.25">1.25倍</option>
+                                      <option value="1.5">1.5倍</option>
+                                      <option value="2">2倍</option>
+                                      <option value="2.5">2.5倍</option>
+                                    </select>
+                              </div>
+                            </div>
+                            <h6>文字对齐</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix found_align">
+                                <i class="iconfont i_left" onclick="fontAlign(this,'left','.form_component .clicked .dir47')">&#xe120;</i>
+                                <i class="iconfont i_center" onclick="fontAlign(this,'center','.form_component .clicked .dir47')">&#xe121;</i>
+                                <i class="iconfont i_right" onclick="fontAlign(this,'right','.form_component .clicked .dir47')">&#xe122;</i>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir47');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir47');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 微信头像 -->
+                          <div class="module_reset edit_singleLine"  id="dir2C"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="微信头像">微信头像</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="90" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir32');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="90" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir32');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>图层顺序</h6>
+                            <div class="found_con found_constyle">
+                              <ul class="textZindex" >
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop1.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop2.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop3.png" class="imgTopbox">
+                                </li>
+                                <li onclick="textZindex(this,'.form_component .clicked')">
+                                  <img src="images/imgTop4.png" class="imgTopbox">
+                                </li>
+                              </ul>
+                            </div>
+                            <h6>圆角半径</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>大小</span> <input type="text" value="0" class="font_ro" onkeyup="font_radius(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+                            <h6>透明度</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacity(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 日程表 -->
+                          <div class="module_reset"  id="dir30"  style="display: none;">
+                             <h6 style="border-top: 0px;margin-top: 0px;">日程内容</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix">
+                                  <select class="font_custom" style="width: 205px;">
+                                      <option value="确认码">2019主会场日程</option>
+                                      <option value="确认码">节能会议分会场</option>
+                                      <option value="确认码">奔驰供应商大会</option>
+                                    </select>
+                                    <span class="dateSurebtn">确定</span>
+                                </div>
+                              </div>
+                              <h6>日程信息</h6>
+                              <ul class="dateCheckbox">
+                                <li>
+                                  <input type="checkbox" dir="1" onclick="checkBox(this)" />
+                                  <label>嘉宾</label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" dir="2" onclick="checkBox(this)" />
+                                  <label>嘉宾简介</label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" dir="4" onclick="checkBox(this)" />
+                                  <label>地点</label>
+                                </li>
+                                <li>
+                                  <input type="checkbox" dir="8" onclick="checkBox(this)" />
+                                  <label>类型</label>
+                                </li>
+                              </ul>
+                              <h6>样式模板</h6>
+                              <div class="found_con found_constyle">
+                                <img src="images/tableModule1.jpg" class="tableModule">
+                                <span class="changeTablemodule">更换样式</span>
+                              </div>
+
+                              <h6>尺寸大小</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix font_wh">
+                                  <span>宽</span> <input type="text" value="370" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir33');"><span>px</span>
+                                  <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir33');"><span>px</span>
+                                </div>
+                              </div>
+                              <h6>位置</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix font_position">
+                                  <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                  <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                                </div>
+                              </div>
+                              <h6>边框</h6>
+                              <div class="found_con found_constyle">
+                                 <!-- <select class="font_line" name="alginStyle"  onchange="fontBorder(this,'border-style','.form_component .clicked .styleoneTable','.form_component .clicked .styleoneTable tr td');">
+                                    <option value="solid">——————</option>
+                                    <option value="dotted">------------</option>
+                                 </select> -->
+                                 <input type="text" value="1" class="border_w" onkeyup="border_width(this,'.form_component .clicked .styleoneTable','.form_component .clicked .styleoneTable tr td');"><span>px</span>
+                                 <input type="text" id="borderColor">
+                              </div>
+                              <h6>标题栏字体</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix">
+                                  <span class="z_family">字号</span>
+                                  <input class="size_min15" type="button" value="-" onclick="size_min(this,'.text_box15','.form_component .clicked .styleoneTable tr th')"/>
+                                  <input class="text_box15" type="text" value="16" onchange="sizeNum('.text_box15','.form_component .clicked .styleoneTable tr th');" />
+                                  <input class="size_add15" style="margin-right: 10px;" type="button" value="+" onclick="size_add(this,'.text_box15','.form_component .clicked .styleoneTable tr th')" />
+                                  <input type="text" id="textId4">
+                                  <i style="margin-left: 15px;margin-right: 15px;cursor: pointer;font-size: 20px;" dir="1" onclick="dateBold(this,'.form_component .clicked .styleoneTable tr th')">B</i>
+                                </div>
+                              </div>
+                              <h6>标题栏背景</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix">
+                                  <input type="text" id="titleBgcolor">
+                                </div>
+                              </div>
+                              <h6>内容字体</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix">
+                                  <span class="z_family">字号</span>
+                                  <input class="size_min15" type="button" value="-" onclick="size_min(this,'.text_box16','.form_component .clicked .styleoneTable tr td')"/>
+                                  <input class="text_box16" type="text" value="14" onchange="sizeNum('.text_box16','.form_component .clicked .styleoneTable tr td');" />
+                                  <input class="size_add15" style="margin-right: 10px;" type="button" value="+" onclick="size_add(this,'.text_box16','.form_component .clicked .styleoneTable tr td')" />
+                                  <input type="text" id="textId5">
+                                  <i style="margin-left: 15px;margin-right: 15px;cursor: pointer;font-size: 20px;" dir="1" onclick="dateBold(this,'.form_component .clicked .styleoneTable tr td span','.form_component .clicked .styleoneTable tr td p')">B</i>
+                                </div>
+                              </div>
+                              <h6>内容背景</h6>
+                              <div class="found_con found_constyle">
+                                <div class="found_list clearfix">
+                                  <input type="text" id="titleBgcolor2">
+                                </div>
+                              </div>
+                              <h6>内容背景透明度</h6>
+                              <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>透明</span> <input min="0" max="100" type="text" value="100" class="font_ro" onkeyup="font_opacitybg(this);"><span>%</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <!-- 2活动二维码-->
+                          <div class="module_reset edit_singleLine"  id="dir41"  style="display:none;">
+                            <h6 style="border-top: 0px;margin-top: 0px;">字段名称</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix">
+                                <select class="font_custom" disabled="true">
+                                    <option value="活动二维码">活动二维码</option>
+                                  </select>
+                              </div>
+                            </div>
+                            <h6>关联活动链接</h6>
+                            <div class="found_con found_constyle">
+                              <input type="text" class="contectBox" value="www.canevent.com">
+                              <span class="contectSpan">设置链接</span>
+                            </div>
+                            <h6>二维码颜色</h6>
+                            <div class="found_con found_constyle">
+                              <input type="text" id="codeColor">
+                            </div>
+                            <h6>尺寸大小</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_wh">
+                                <span>宽</span> <input type="text" value="120" class="font_w" onkeyup="font_width(this,'.form_component .clicked .dir44');"><span>px</span>
+                                <span class="font_height">高</span> <input type="text" value="38" class="font_h" onkeyup="font_height(this,'.form_component .clicked .dir44');"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>位置</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>距左</span> <input type="text" value="0" class="font_l" onkeyup="font_left(this);"><span>px</span>
+                                <span class="font_top">距顶</span> <input type="text" value="0" class="font_t" onkeyup="font_top(this);"><span>px</span>
+                              </div>
+                            </div>
+                            <h6>旋转</h6>
+                            <div class="found_con found_constyle">
+                              <div class="found_list clearfix font_position">
+                                <span>角度</span> <input type="text" value="0" class="font_ro" onkeyup="font_rotate(this);"><span>度</span>
+                              </div>
+                            </div>
+
+                          </div>
+
+
+
+                          <!-- 选择组件提示 -->
+                          <div class="module_reset edit_singleLine"  id="dir13"  style="display:block;">
+                            <p class="form_componentEdit_tips" style="display: block;">请先选择组件</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 32基础内容设置 -->
+                      <div class="invitee_b_con invitee_b_con2" style="display: none;">
+                        <h6 style="border-top: 0px;margin-top: 0px;">海报名称</h6>
+                        <div class="found_con found_constyle">
+                          <input type="text" value="XX医学会议分享海报1" class="input_cardName">
+                        </div>
+                        <h6>关联活动</h6>
+                        <div class="found_con found_constyle">
+                          <select class="select_card" id="" >
+                             <option value="2015节能会议">2015节能会议</option>
+                             <option value="2015节能会议">2015节能会议2</option>
+                          </select>
+                          <span class="posterContect">关联</span>
+                        </div>
+                        <h6>胸卡尺寸</h6>
+                        <div class="found_con found_constyle1">
+                          <div class="tab_txt">
+                             <div class="tab_txt2" style="display:block;">
+                               <span>宽</span><input type="text" value="375" class="tab_w" onkeyup="set_width(this)"><span>px</span>
+                               <span class="tab_span">高</span><input type="text" value="667" class="tab_h" onkeyup="set_height(this)"><span>px</span>
+                             </div>
+                          </div>
+                        </div>
+                        <h6>海报背景</h6>
+                        <div class="found_con found_constyle1">
+                          <div class="print_box">
+                            <div class="one_print act">纯色</div>
+                            <div class="two_print">图片</div>
+                          </div>
+                        </div>
+                        <div class="posterBgbox">
+                          <div class="found_con found_constyle1" style="position: relative;height: 145px;">
+                            <input type="text" id="posterBg" />
+                          </div>
+                          <!-- 图片 -->
+                          <div class="found_con found_constyle1" style="position: relative; display:none;height: 145px;">
+                            <div class="face_img">
+                              <img src="images/face.png" width="78" height="105">
+                            </div>
+                            <p class="face_tit">图片默认100%显示</p>
+                            <button class="face_upd" onclick="cutImg('null', 1,'')">上传图片</button>
+                            <button class="face_del">删除图片</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      </div>
+
+                   <!-- ---------------------------------------------------- -->
+                    </div>
+                </div>
+
+
+              </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+</div>
+
+    <!-- 更换模板 -->
+    <div class="popup" id="moduleBgpo" style="display:none">
+        <div class="popup_show">
+          <div class="pop_tit">
+    			<p class="f_left">提示</p>
+    			<span class="f_right pop_xx"></span>
+              </div>
+              <div class="pop_con" style="padding: 30px 55px 20px 75px;font-size: 14px;color: #666666;background: none;">确定更换模板么？ 更换模板后，会覆盖已编辑的模块。</div>
+              <div class="pop_b_btn">
+                <button class="pop_btn1 current" style="border: 1px solid #4078cb;" onclick="posterMsure()">确认</button>
+                <button class="pop_btn1 current" style="background:#CCCCCC;border: 1px solid #CCCCCC;color: #fff;margin-left: 20px;" onclick="posterMdelete()">取消</button>
+              </div>
+        </div>
+    </div>
+    <!-- 保存 -->
+    <div class="popup" id="sucessMsure" style="display:none">
+        <div class="popup_show">
+          <div class="pop_tit">
+          <p class="f_left">提示</p>
+          <span class="f_right pop_xx"></span>
+              </div>
+              <div class="pop_con" style="">保存成功！</div>
+              <div class="pop_b_btn">
+                <button class="pop_btn1 current" style="border: 1px solid #4078cb;" onclick="sucessMsure()">确认</button>
+              </div>
+        </div>
+    </div>
+    <!-- 分享 -->
+    <div class="popup" id="posterShare" style="display:none;">
+        <div class="popup_show" style="width: 550px;">
+          <div class="pop_tit">
+            <p class="f_left">海报分享</p>
+            <span class="f_right pop_xx"></span>
+          </div>
+          <div class="posterSharebox">
+            <div class="posterSharebox1">
+              <span class="posterSharetitle">海报链接：</span>
+              <input type="text" name="">
+              <span class="posterSharecopy">复制</span>
+            </div>
+            <div class="posterSharebox1">
+              <span class="posterSharetitle">二维码：</span>
+              <div class="posterSharecodebox">
+                 <img src="images/u80.png" class="posterSharecode">
+              </div>
+            </div>
+          </div>
+          <div class="pop_b_btn">
+            <button class="pop_btn1 current" style="border: 1px solid #4078cb;" onclick="cancelShare()">确认</button>
+            <button class="pop_btn1 " style="background: #F7F7F7;color: #000;margin-left: 20px;" onclick="cancelShare()">取消</button>
+          </div>
+        </div>
+    </div>
+
+
+     <!-- 表格样式设置 -->
+    <div class="tanchuang_box"  style="display: none;">
+      <!-- 表格样式设置 -->
+      <div class="admission_pop1" style="">
+        <div class="pop_tit">
+          <p class="f_left">表格样式设置</p>
+          <span class="f_right pop_xx"></span>
+        </div>
+        <div class="admission_con" id="admission_con">
+          <div class="tableModulebox">
+            <img src="images/tableLeft.png" class="tableImgl" onclick="tableImgl()">
+            <div class="tableModulecontent">
+              <div class="tableModulemain">
+                <ul class="tableModulemain1 tableModulemain3">
+                  <li><img src="images/tableModule1.jpg" dir="1"></li>
+                  <li><img src="images/tableModule2.jpg" dir="2"></li>
+                  <li><img src="images/tableModule3.jpg" dir="3"></li>
+                </ul>
+                <ul class="tableModulemain2 tableModulemain4">
+                  <li><img src="images/tableModule4.jpg" dir="4"></li>
+                  <li><img src="images/tableModule5.jpg" dir="5"></li>
+                  <li><img src="images/tableModule6.jpg" dir="6"></li>
+                </ul>
+              </div>
+            </div>
+            <img src="images/tableRight.png" class="tableImgr"onclick="tableImgr()">
+          </div>
+        </div>
+        <div class="pop_b_btn off">
+          <button class="pop_btn1" onclick="sureTablemodule()">确定</button>
+          <button class="pop_btn3">取消</button>
+        </div>
+      </div>
+    </div>
+
+   <!-- 模板5 -->
+   <div id="posterM5" style="display: none;">
+           <li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -14px; top: 233px;">
+                          <div name="paper" dir="30"><div class="dir33" style="position: relative; width: 370px; min-height: 38px; line-height: 1.25; left: 0px;"><div class="dateBox"><div class="dateStylenone"><div class="styleoneBox"><table class="styleoneTable" style="border: none;"><thead class="dateThead"><tr style="background: rgba(255, 255, 255, 0);"><th style="background: rgb(245, 129, 142); color: rgb(255, 255, 255);">时间</th><th style="display: table-cell; background: rgb(245, 129, 142); color: rgb(255, 255, 255);">内容</th><th style="background: rgb(245, 129, 142); color: rgb(255, 255, 255);">人物</th><th style="display: none; background: rgb(245, 129, 142); color: rgb(255, 255, 255);">嘉宾</th><th style="display: table-cell; background: rgb(245, 129, 142); color: rgb(255, 255, 255);">地点</th></tr></thead><tbody><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">11:00-12:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>午休</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">12:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>参观</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">12:00-14:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">14:00-14:30</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>实际操作</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">14:30-16:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><span style="color: rgb(0, 0, 0);">16:30-17:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>致欢迎词内容</p><span class="nameJ" style="display: inline; color: rgb(0, 0, 0);">李四嘉宾</span><span class="nameH" style="display: inline; color: rgb(0, 0, 0);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(0, 0, 0); font-size: 12px;"><p>会议室101地点</p></td></tr></tbody></table></div></div></div><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor18"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -6px; top: 205px;">
+                          <div name="paper" dir="21"><div class="dir21" style="position: relative; width: 356px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 36px; color: rgb(245, 129, 142);"><span style="font-size: 18px; font-family: &quot;Microsoft YaHei&quot;;">会议日程</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -5px; top: 172px;">
+                          <div name="paper" dir="21"><div class="dir21" style="position: relative; width: 353px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 39px;"><span style="font-size: 14px;font-family:Microsoft YaHei;">(会议时间：2019/03/06&nbsp; &nbsp;11:00-17:30)</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -7px; top: 136px;">
+                          <div name="paper" dir="21"><div class="dir21" style="position: relative; width: 356px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 35px; color: rgb(245, 129, 142);"><span style="font-size: 21px; font-family: &quot;Microsoft YaHei&quot;;">一站式会议在线解决方案</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: 285px; top: -4px;">
+                          <div name="paper" dir="41"><div class="dir44" style="position: relative; left: 0px; width: 70px; height: 70px;"><img src="images/u1263.png" class="fieldImgBox" width="100%" height="100%"><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor29"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: -3px; top: 85px;">
+                          <div name="paper" dir="11"><div style="position: relative; width: 355px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 35px; color: rgb(245, 129, 142);" class="dir11 wenzi1"><span style="font-size: 33px; font-family: &quot;Microsoft YaHei&quot;; font-weight: bold;">2 0 1 8 会 腾 软 件</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor1"></div></div></div></li><li class="utility ui-draggable" style="display: inline-block; position: absolute; left: 219px; top: 59px;">
+                          <div name="paper" dir="21"><div class="dir21" style="position:relative;width: 200px; min-height: 38px; line-height: 1.25;text-align: center;word-wrap: break-word;word-break: normal;"><span style="font-size: 12px; font-family: &quot;Microsoft YaHei&quot;;">扫码关注</span><img class="del_img" src="images/delete_hover.png" style="display: none;"><div class="coor6"></div></div></div></li>
+   </div>
+   <!-- 模板1 -->
+  <div id="posterM1" style="display: none;">
+     <li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 55px; top: 44px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 243px; height: 33px;"><img src="images/postert1.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 29px; top: 46px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 117px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 35px; color: rgb(254, 57, 58);"><span style="font-size: 20px; font-family: &quot;Microsoft YaHei&quot;;">3.8</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 112px; top: 50px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 194px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 30px; color: rgb(254, 57, 58);"><span style="font-size: 17px; font-family: &quot;Microsoft YaHei&quot;;">与会腾相约女女神节</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 16px; top: 134px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 314px; height: 211px;"><img src="images/postert2.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 100px; top: 366px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; left: 0px; width: 155px; height: 142px;"><img src="images/postert3.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li>
+  </div>
+  <!-- 模板2 -->
+  <div id="posterM2" style="display: none;">
+    <li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 11px; top: 82px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 344px; height: 316px;"><img src="images/postert4.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -18px; top: 389px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; left: 0px; width: 382px; height: 231px;"><img src="images/postert5.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable clicked"style="display: inline-block; position: absolute; left: -20px; top: 586px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 387px; height: 89px; left: 0px;"><img src="images/postert6.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li>
+  </div>
+  <!-- 模板3 -->
+  <div id="posterM3" style="display: none;">
+    <li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 233px; top: 607px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 125px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 35px; color: rgb(255, 255, 255); left: 0px;"><span style="font-size: 13px; font-family: &quot;Microsoft YaHei&quot;;">欢迎扫码关注</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 20px; top: 58px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 305px; height: 39px;"><img src="images/postert7.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -18px; top: 564px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 245px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; color: rgb(236, 168, 79); left: 0px; height: 38px;"><span style="font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">静安区江场西路160号美邦大厦</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -11px; top: 487px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 85px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; left: 0px; height: 30px; color: rgb(255, 255, 255);"><span style="font-size: 14px; font-family: &quot;Microsoft YaHei&quot;;">时间/TIME</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block;position: absolute;left: -8px;top: 117px;display:;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 364px; height: 352px;"><img src="images/postert8.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -25px; top: 506px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 252px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; color: rgb(236, 168, 79); height: 40px;"><span style="font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">2019/03/26&nbsp;&nbsp;&nbsp;&nbsp;10:00-12:00</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -68px; top: 543px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 200px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; left: 0px; color: rgb(255, 255, 255);"><span style="font-size: 14px;font-family:Microsoft YaHei;">地址/ADD</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -65px; top: 592px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 200px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; color: rgb(255, 255, 255);"><span style="font-size: 14px;font-family:Microsoft YaHei;">电话/CALL</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -47px; top: 615px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 200px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; color: rgb(236, 168, 79); left: 0px;"><span style="font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">400-666-1212</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 244px; top: 507px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 99px; height: 105px;"><img src="images/erweima.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 101px; top: 249px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 20px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 141px; color: rgb(255, 255, 255); left: 0px;"><span style="font-size: 12px; font-family: &quot;Microsoft YaHei&quot;;">会腾事业总裁</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 70px; top: 264px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 20px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 146px; color: rgb(255, 255, 255);"><span style="font-size: 13px; font-family: &quot;Microsoft YaHei&quot;;">凌脉网络科技高管</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -65px; top: 350px; transform: rotate(90deg);"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 200px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; color: rgb(204, 204, 204);"><span style="font-size: 14px;font-family:Microsoft YaHei;">EVENT&nbsp;2019</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li>
+  </div>
+  <!-- 模板4 -->
+  <div id="posterM4" style="display: none;">
+    <li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -12px; top: 203px;"><div name="paper"dir="30"><div class="dir33"style="position: relative; width: 370px; min-height: 38px; line-height: 1.25; left: 0px;"><div class="dateBox"><div class="dateStylenone"><div class="styleoneBox"><table class="styleoneTable"style="border: none;"><thead class="dateThead"><tr style="background: rgba(255, 255, 255, 0);"><th style="color: rgb(255, 255, 255); background: rgb(92, 92, 255);">时间</th><th style="color: rgb(255, 255, 255); display: table-cell; background: rgb(92, 92, 255);">内容</th><th style="color: rgb(255, 255, 255); background: rgb(92, 92, 255);">人物</th><th style="color: rgb(255, 255, 255); display: none; background: rgb(92, 92, 255);">嘉宾</th><th style="color: rgb(255, 255, 255); display: table-cell; background: rgb(92, 92, 255);">地点</th></tr></thead><tbody><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 255);">12:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>参观</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>致欢迎词内容</p><span class="nameJ"style="display: inline; color: rgb(255, 255, 255);">李四嘉宾</span><span class="nameH"style="display: inline; color: rgb(255, 255, 255);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 255);">12:00-14:00</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>致欢迎词内容</p><span class="nameJ"style="display: inline; color: rgb(255, 255, 255);">李四嘉宾</span><span class="nameH"style="display: inline; color: rgb(255, 255, 255);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 255);">14:00-14:30</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>实际操作</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>致欢迎词内容</p><span class="nameJ"style="display: inline; color: rgb(255, 255, 255);">李四嘉宾</span><span class="nameH"style="display: inline; color: rgb(255, 255, 255);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 255);">14:30-16:30</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>致欢迎词内容</p><span class="nameJ"style="display: inline; color: rgb(255, 255, 255);">李四嘉宾</span><span class="nameH"style="display: inline; color: rgb(255, 255, 255);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>会议室101地点</p></td></tr><tr style="background: rgba(255, 255, 255, 0);"><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><span style="color: rgb(255, 255, 255);">16:30-17:30</span></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>报告</p></td><td style="border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>致欢迎词内容</p><span class="nameJ"style="display: inline; color: rgb(255, 255, 255);">李四嘉宾</span><span class="nameH"style="display: inline; color: rgb(255, 255, 255);">嘉宾简介</span></td><td style="display: none; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>嘉宾张三</p></td><td style="display: table-cell; border-top: none; border-right: none; border-bottom: 1px dotted rgb(204, 204, 204); border-left: none; border-image: initial; color: rgb(255, 255, 255);"><p>会议室101地点</p></td></tr></tbody></table></div></div></div><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor18"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 5px; top: 169px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 329px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; color: rgb(238, 238, 238); height: 59px;"><span style="font-size: 24px; font-family: &quot;Microsoft YaHei&quot;;">一站式在线解决方案</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 75px; top: 572px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 200px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; color: rgb(238, 238, 238);"><span style="font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">2019年1月16日<div>周三</div></span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 286px; top: 10px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 65px; height: 55px;"><img src="images/erweima.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 281px; top: 63px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 69px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 30px; color: rgb(238, 238, 238);"><span style="font-size: 12px; font-family: &quot;Microsoft YaHei&quot;;">扫码关注</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 35px; top: 81px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 282px; height: 98px;"><img src="images/postert9.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li>
+  </div>
+  <!-- 模板6 -->
+  <div id="posterM6" style="display: none;">
+    <li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -12px; top: 249px;"><div name="paper"dir="30"><div class="dir33"style="position:relative;width: 370px; min-height: 38px; line-height: 1.25;"><div class="dateBox"><div class="dateStylenone"><div class="styleoneBox"><table class="styleoneTable"style="border: none;"><thead class="dateThead"style="
+                            display: none;
+                            "><tr style="background: rgb(228, 243, 255);"><th style="background: rgb(103, 178, 245); color: rgb(255, 255, 255);">时间</th><th style="display: table-cell; background: rgb(103, 178, 245); color: rgb(255, 255, 255);">内容</th><th style="background: rgb(103, 178, 245); color: rgb(255, 255, 255);">人物</th><th style="display: none; background: rgb(103, 178, 245); color: rgb(255, 255, 255);">嘉宾</th><th style="display: table-cell; background: rgb(103, 178, 245); color: rgb(255, 255, 255);">地点</th></tr></thead><tbody><tr style="background: rgb(228, 243, 255);"><td style="border: none;"><span>12:00</span></td><td style="display: table-cell; border: none;"><p>类型</p></td><td style="border: none;"><p>致欢迎词内容</p><span class="nameJ"style="display: inline;">李四嘉宾</span><span class="nameH"style="display: inline;">嘉宾简介</span></td><td style="display: none; border: none;"><p>嘉宾张三</p></td><td style="display: table-cell; border: none;"><p>会议室101地点</p></td></tr><tr style="background: rgb(185, 222, 255);"><td style="border: none;"><span>12:00-14:00</span></td><td style="display: table-cell; border: none;"><p>类型</p></td><td style="border: none;"><p>致欢迎词内容</p><span class="nameJ"style="display: inline;">李四嘉宾</span><span class="nameH"style="display: inline;">嘉宾简介</span></td><td style="display: none; border: none;"><p>嘉宾张三</p></td><td style="display: table-cell; border: none;"><p>会议室101地点</p></td></tr><tr style="background: rgb(228, 243, 255);"><td style="border: none;"><span>12:00-14:00</span></td><td style="display: table-cell; border: none;"><p>类型</p></td><td style="border: none;"><p>致欢迎词内容</p><span class="nameJ"style="display: inline;">李四嘉宾</span><span class="nameH"style="display: inline;">嘉宾简介</span></td><td style="display: none; border: none;"><p>嘉宾张三</p></td><td style="display: table-cell; border: none;"><p>会议室101地点</p></td></tr><tr style="background: rgb(185, 222, 255);"><td style="border: none;"><span>12:00-14:00</span></td><td style="display: table-cell; border: none;"><p>类型</p></td><td style="border: none;"><p>致欢迎词内容</p><span class="nameJ"style="display: inline;">李四嘉宾</span><span class="nameH"style="display: inline;">嘉宾简介</span></td><td style="display: none; border: none;"><p>嘉宾张三</p></td><td style="display: table-cell; border: none;"><p>会议室101地点</p></td></tr></tbody></table></div></div></div><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor18"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: -7px; top: 227px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 352px; min-height: 38px; line-height: 1.25; text-align: left; overflow-wrap: break-word; word-break: normal; color: rgb(0, 0, 0); height: 40px;"><span style="font-size: 15px; font-family: &quot;Microsoft YaHei&quot;;">2019年1月16日&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;周三&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14:00-18:00</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 9px; top: 149px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 335px; height: 36px;"><img src="images/postert10.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 9px; top: 69px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 226px; height: 68px;"><img src="images/postert11.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 297px; top: 10px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 56px; height: 56px;"><img src="images/erweima.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 279px; top: 63px;"><div name="paper"dir="21"><div class="dir21"style="position: relative; width: 88px; min-height: 38px; line-height: 1.25; text-align: center; overflow-wrap: break-word; word-break: normal; height: 30px;"><span style="font-size: 13px; font-family: &quot;Microsoft YaHei&quot;;">扫码关注</span><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor6"></div></div></div></li><li class="utility ui-draggable"style="display: inline-block; position: absolute; left: 245px; top: 521px;"><div name="paper"dir="12"><div class="dir12 g_picture"style="position: relative; width: 128px; height: 148px;"><img src="images/postert12.png"class="fieldImgBox"width="100%"height="100%"><img class="del_img"src="images/delete_hover.png"style="display: none;"><div class="coor3"></div></div></div></li>
+  </div>
+
+
+
+
+
+
+<!-- 20190320  模态框 设置链接-->
+    <div id="module_2" style="display: none;">
+      <div id="module_22">
+         <div style="width:100%;height:50px;background-color: #F8F9FB;border-bottom: 3px solid #E4E5E7;line-height: 50px;padding-left: 10px;">
+          <span style="font-size: 15px;">设置链接</span>
+          <img src="images/u7.png" style="width:35px;float: right;margin: 7px 20px 0 0;" class="a8">
+       </div>
+       <div id="module_222">
+           <div class="module_left">
+                <a href="#module_left1">本站页面</a>
+                <a href="#module_left2">注册通道</a>
+                <a href="#module_left3">自助签到</a>
+                <a href="#module_left4">个人后台</a>
+                <a href="#module_left5">微邀请</a>
+                <a href="#module_left6">问卷调查</a>
+                <a href="#module_left7"class="module_active">微网站</a>
+           </div>
+           <div class="module_right">
+               <div id="module_left1" class="module_act">
+1111111
+               </div>
+               <div id="module_left2" class="module_act">
+22222222222222
+               </div>
+               <div id="module_left3" class="module_act">
+3333333333333333
+               </div>
+               <div id="module_left4" class="module_act">
+44444444444444
+               </div>
+               <div id="module_left5" class="module_act">
+555555555555555
+               </div>
+               <div id="module_left6" class="module_act" >
+666666666666666666
+               </div>
+               <div id="module_left7"  class=" module_act module_av">
+                        <ul>
+                          <li><img src="images/u58.png" alt=""></li>
+                          <li><img src="images/u58.png" alt=""></li>
+                          <li><img src="images/u58.png" alt=""></li>
+                          <li><img src="images/u58.png" alt=""></li>
+                          <li><img src="images/u58.png" alt=""></li>
+                          <li><img src="images/u58.png" alt=""></li>
+                        </ul>
+               </div>
+           </div>
+       </div>
+       <div class="t_b4">
+         <span>确定</span>
+         <span>取消</span>
+      </div>
+      </div>
+    </div>
+
+
+
+
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<!-- 截图插件 -->
+<script src="js/layer.js"></script>
+
+<script src="js/posterIndex.js"></script>
+<script src="js/jquery-ui-1.9.2.custom.min.js"></script>
+<!-- 颜色控件 -->
+<script type="text/javascript" src="js/spectrum.js"></script>
+<script type="text/javascript" src="js/posterColor.js"></script>
+
+<script src="js/distpicker.data.js"></script>
+<script src="js/distpicker.js"></script>
+<script src="js/main.js"></script>
+<script src="js/pageRule.js"></script>
+<script src="js/mnn-poster.js?t=3"></script>
+<script id="dragjs" src="js/drag.js?t=3"></script>
+
+
+<script type="text/javascript">
+
+  $(function(){
+    $.pageRuler();
+
+  });
+
+  // 裁图设置
+function cutImg(s, t,arr){// s = 设置当前图片选择器
+  var selector = encodeURIComponent(s);
+  var a = encodeURIComponent(arr);
+  layer.open({
+    title: '裁剪图片',
+    type: 2,
+    area: ['90%', '600px'],
+    fixed: false, //不固定
+    maxmin: true,
+    content: 'cutImg.html?1s='+ selector + '&t='+t + '&arr='+a
+  });
+  $(".layui-layer-content").find("iframe").css("transform", "scale(1)");
+  $(".layui-layer").css("width", "80%");
+  $(".layui-layer").css("height", "60%");
+  $(".layui-layer").css("left", "10%");
+  $(".layui-layer").css("top", "10%");
+}
+
+
+</script>
+</body>
+</html>
